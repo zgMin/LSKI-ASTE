@@ -32,7 +32,7 @@ def train(args):
     optimizer = torch.optim.AdamW([
         # {'params': model.parameters(),'lr': 2e-5},
 	{'params': model.bert.parameters(), 'lr': 2e-5},
-        {'params': model.pd_encoder.parameters()},
+        {'params': model.learner.parameters()},
         {'params': model.fusion.parameters()},
         {'params': model.cls_linear.parameters()},
         {'params': model.feature_linear.parameters()}
